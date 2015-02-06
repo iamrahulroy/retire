@@ -519,7 +519,7 @@ module Tire
         when document.is_a?(Hash)
           document[:_id] || document['_id'] || document[:id] || document['id']
         when document.respond_to?(:id) && document.id != document.object_id
-          document.id.to_s
+          document.get_customized_id
       end
       $VERBOSE = old_verbose
       id
