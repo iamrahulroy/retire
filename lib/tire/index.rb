@@ -513,6 +513,7 @@ module Tire
     end
 
     def get_id_from_document(document)
+      debugger
       old_verbose, $VERBOSE = $VERBOSE, nil # Silence Object#id deprecation warnings
       id = case
         when document.is_a?(Hash)
